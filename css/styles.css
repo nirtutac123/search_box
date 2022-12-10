@@ -1,0 +1,105 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/* Variables */
+:root {
+  /* FONTS */
+  --primary-font: "Poppins", sans-serif;
+
+  /* COLORS */
+  --gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --instagram-color: #c13585;
+  --facebook-bolor: #4267b2;
+  --twitter-color: #1da1f2;
+  --youtube-color: #ff0000;
+  --github-color: #333333;
+}
+
+/* BASE */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: var(--gradient);
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+/* BUTTONS SECTION */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: #fff;
+  height: 80px;
+  width: 80px;
+  border-radius: 50px;
+  margin: 0 5px;
+  padding: 10px 0;
+  cursor: pointer;
+  box-shadow: 0 10px 10px rgb(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all .3s ease-out;
+}
+
+.button__content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button__icon {
+  font-size: 40px;
+}
+
+.button__name {
+  display: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* HOVER STATES */
+
+.button:hover {
+  width: 200px;
+}
+
+.button:hover .button__name{
+  display: inline-block;
+}
+
+.button:nth-child(1):hover .button__content {
+  color: var(--instagram-color);
+}
+
+.button:nth-child(2):hover .button__content {
+  color: var(--facebook-bolor);
+}
+
+.button:nth-child(3):hover .button__content {
+  color: var(--twitter-color);
+}
+
+.button:nth-child(4):hover .button__content {
+  color: var(--youtube-color);
+}
+
+.button:nth-child(5):hover .button__content {
+  counter-reset: var(--github-color);
+}
